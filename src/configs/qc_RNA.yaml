@@ -1,0 +1,29 @@
+qc:
+  filtering_strategy: threshold
+  n_features_low: 500
+  n_features_hi: 7000
+  pct_counts_mt_hi: 3
+  pct_counts_ribo_hi: 1
+remove_background:
+  method: soupx
+  markers_path: /path/to/markers.txt
+  layer: soupx_counts
+detect_doublelets:
+  method: consensus
+  consensus_methods:
+    - scrublet
+    - scDblFinder
+    - cellranger
+  consensus_strategy: union
+normalize:
+  methods:
+    - log1p
+    - sctransform
+  vars_to_regress:
+    - pct_counts_mt
+    - pct_counts_ribo
+reduce_dimensions:
+  method: seurat_default
+  obsm_key: sctransform_scale_data
+  variable_features_key: sctransform_genes
+random_state: 1234

@@ -1,0 +1,17 @@
+io:
+  chunk_size: 2000
+  min_load_num_fragments: 1000
+  sorted_by_barcode: false
+  save_intermediate: true
+qc:
+  max_num_fragments: 1000000
+  min_num_fragments: 1000
+  min_tsse: 5
+  additional_doublets: /path/to/doublets.txt
+feature_selection:
+  bin_size: 5000
+  num_features: 50000
+  blacklist_path: /path/to/blacklist.bed.gz
+analysis:
+  clustering_resolution: 1
+  gene_activity: false

@@ -1,6 +1,6 @@
 # Can be run concurrently with 1_qc_RNA.sh
 # UPDATE ARRAY JOB EACH TIME TO REFLECT NUMBER OF SAMPLES IN INPUT_TSV
-script_path=~/single_cell_utilities/sample_qc/AMULET.sh
+script_path=scripts/AMULET.sh
 
 # TODO: UPDATE Slurm settings
 job_name=AMULET

@@ -1,6 +1,6 @@
 # Must complete 3_consolidate_AMULET.ipynb before running this script
 # UPDATE ARRAY JOB EACH TIME TO REFLECT NUMBER OF SAMPLES IN INPUT_TSV
-script_path=~/single_cell_utilities/sample_qc/qc_ATAC.sh
+script_path=scripts/qc_ATAC.sh
 
 # TODO: UPDATE Slurm settings
 job_name=qc_ATAC

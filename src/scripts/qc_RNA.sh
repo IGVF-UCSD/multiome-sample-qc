@@ -23,7 +23,7 @@ config_yaml=$2
 outdir_path=$3/${sample_id}/rna
 
 # Load YAML parameters
-parse_script_path=/cellar/users/aklie/data/datasets/igvf_sc-islet_10X-Multiome/bin/3_sample_qc/scripts/parse_yaml.py
+parse_script_path=/cellar/users/aklie/projects/igvf/multiome-sample-qc/src/scripts/parse_yaml.py
 source <(python3 $parse_script_path $config_yaml)
 
 # Echo inputs and number of inputs

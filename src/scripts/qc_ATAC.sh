@@ -15,7 +15,6 @@ export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$HOME/opt/miniconda3/lib/
 
 # Inputs
 input_tsv=$1
-outdir_path=$2
 input_frag_paths=($(cut -f1 $input_tsv))
 sample_ids=($(cut -f2 $input_tsv))
 input_frag_path=${input_frag_paths[$SLURM_ARRAY_TASK_ID-1]}
@@ -29,7 +28,6 @@ echo -e "input_frag_path: $input_frag_path"
 echo -e "sample_id: $sample_id"
 echo -e "outdir_path: $outdir_path"
 echo -e "config_yaml: $config_yaml"
-echo -e "annot_path: $annot_path\n"
 
 # If output dir does not exist, create it
 if [ ! -d $outdir_path ]; then

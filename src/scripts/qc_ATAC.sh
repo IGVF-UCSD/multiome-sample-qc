@@ -10,7 +10,7 @@ date
 echo -e "Job ID: $SLURM_JOB_ID\n"
 
 # Configuring env (choose either singularity or conda)
-source activate /cellar/users/aklie/opt/miniconda3/envs/scverse-lite-py39
+source activate /cellar/users/aklie/opt/miniconda3/envs/scverse-lite-py311
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$HOME/opt/miniconda3/lib/
 
 # Inputs
